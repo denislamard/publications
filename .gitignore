@@ -1,0 +1,11 @@
+# Tout est ignoré par défaut
+*
+
+# Sauf les dossiers, pour que Git puisse descendre dedans
+!*/
+
+# Sauf ce qu'on publie
+!*.pdf
+!README.md
+!.gitignore
+!LICENSE
