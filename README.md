@@ -45,3 +45,26 @@ traitement de commandes ou au tri de tickets ou autres cas métier.
 
 ---
 
+### [Avant d'intégrer un agent IA, répondez à ces 4 questions](quatre-questions-agent-ia.pdf)
+
+*Article · 2026 · 4 pages*
+
+La porte d'entrée du guide, pour qui veut d'abord savoir si son processus est un
+bon candidat avant d'entrer dans le détail de la mise en œuvre. L'article livre
+la grille d'éligibilité complète, tableau de notation compris, et se lit en
+moins de dix minutes.
+
+**Ce qu'il contient**
+
+- Pourquoi les projets d'agents s'arrêtent entre la démonstration et la
+  production
+- Le test préalable entre agent et workflow, illustré sur une facture
+  fournisseur et sur une boîte mail partagée
+- Les quatre critères d'éligibilité, chacun avec son calcul ou son
+  contre-exemple
+- La grille de notation de 0 à 3 et la lecture du score
+- Le raccourci de décision : si l'agent se trompe le mardi, puis-je réparer le
+  mercredi sans perte d'argent ni de confiance ?
+- Les questions auxquelles la grille ne répond pas, et que traite le guide
+
+---
