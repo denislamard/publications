@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" role="img" aria-labelledby="t d" width="1000" height="280">
+  <title id="t">D'un document entrant à un document validé</title>
+  <desc id="d">Une pile de documents alimente un agent, qui répartit le travail sur des rôles spécialisés, passe par une vérification, et produit un document validé.</desc>
+
+  <!-- palette : encre #0F1519 · pétrole #1E5468 · #4E8296 · #7BA3B1 · #A9C2CB · filet #DCE2E5 · filet fort #BFC9CE -->
+
+  <g fill="none" stroke-linecap="round">
+
+    <!-- ─── entrée : la pile de documents ─── -->
+    <g>
+      <rect x="62" y="58" width="104" height="142" rx="2" fill="#fff" stroke="#E2E8EA" stroke-width="1.5"/>
+      <rect x="54" y="64" width="104" height="142" rx="2" fill="#fff" stroke="#D2DADE" stroke-width="1.5"/>
+      <rect x="46" y="70" width="104" height="142" rx="2" fill="#fff" stroke="#BFC9CE" stroke-width="1.5"/>
+      <g fill="#DCE2E5" stroke="none">
+        <rect x="62" y="90" width="44" height="6" rx="3" fill="#7BA3B1"/>
+        <rect x="62" y="112" width="72" height="5" rx="2.5"/>
+        <rect x="62" y="128" width="72" height="5" rx="2.5"/>
+        <rect x="62" y="144" width="58" height="5" rx="2.5"/>
+        <rect x="62" y="160" width="72" height="5" rx="2.5"/>
+        <rect x="62" y="176" width="38" height="5" rx="2.5"/>
+      </g>
+    </g>
+
+    <!-- ─── les documents entrent dans l'agent ─── -->
+    <g stroke="#C9D2D6" stroke-width="1.5">
+      <path d="M154 108 C 214 108 246 138 328 138"/>
+      <path d="M154 140 C 220 140 250 140 328 140"/>
+      <path d="M154 172 C 214 172 246 142 328 142"/>
+    </g>
+
+    <!-- ─── l'agent ─── -->
+    <circle cx="376" cy="140" r="48" stroke="#DCE2E5" stroke-width="1.5"/>
+    <circle cx="376" cy="140" r="34" fill="#1E5468" stroke="none"/>
+    <g stroke="#FFFFFF" stroke-width="1.6">
+      <path d="M376 140 L376 125"/>
+      <path d="M376 140 L363 148"/>
+      <path d="M376 140 L389 148"/>
+    </g>
+    <g fill="#FFFFFF" stroke="none">
+      <circle cx="376" cy="140" r="3"/>
+      <circle cx="376" cy="123" r="3.6"/>
+      <circle cx="361.5" cy="149" r="3.6"/>
+      <circle cx="390.5" cy="149" r="3.6"/>
+    </g>
+    <!-- la boucle : l'agent recommence tant qu'il n'a pas de quoi répondre -->
+    <path d="M315 105 A 70 70 0 0 1 437 105" stroke="#A9C2CB" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <path d="M429 94 L438 106 L426 108" stroke="#A9C2CB" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- ─── l'agent répartit sur les rôles ─── -->
+    <g stroke="#C9D2D6" stroke-width="1.5">
+      <path d="M424 138 C 480 132 496 62 542 60"/>
+      <path d="M426 139 C 484 136 500 112 548 111"/>
+      <path d="M426 141 C 484 144 500 168 548 169"/>
+      <path d="M424 142 C 480 148 496 218 550 220"/>
+    </g>
+    <g stroke="none">
+      <circle cx="562" cy="60" r="20" fill="#1E5468"/>
+      <circle cx="562" cy="111" r="13" fill="#4E8296"/>
+      <circle cx="562" cy="169" r="13" fill="#7BA3B1"/>
+      <circle cx="562" cy="220" r="10" fill="#A9C2CB"/>
+    </g>
+
+    <!-- ─── les rôles rendent leur résultat, la sortie est vérifiée ─── -->
+    <g stroke="#C9D2D6" stroke-width="1.5">
+      <path d="M582 60 C 628 62 646 132 692 138"/>
+      <path d="M575 111 C 630 114 650 136 692 139"/>
+      <path d="M575 169 C 630 166 650 144 692 141"/>
+      <path d="M572 220 C 628 218 646 148 692 142"/>
+    </g>
+    <rect x="694" y="116" width="48" height="48" rx="5" fill="#fff" stroke="#1E5468" stroke-width="1.5"/>
+    <path d="M706 140 L715 150 L731 130" stroke="#1E5468" stroke-width="2.2" stroke-linejoin="round"/>
+
+    <path d="M742 140 L836 140" stroke="#C9D2D6" stroke-width="1.5"/>
+
+    <!-- ─── sortie : le document validé ─── -->
+    <g>
+      <rect x="840" y="70" width="104" height="142" rx="2" fill="#fff" stroke="#1E5468" stroke-width="1.5"/>
+      <g fill="#DCE2E5" stroke="none">
+        <rect x="856" y="90" width="44" height="6" rx="3" fill="#1E5468"/>
+        <rect x="856" y="112" width="72" height="5" rx="2.5"/>
+        <rect x="856" y="128" width="72" height="5" rx="2.5"/>
+        <rect x="856" y="144" width="58" height="5" rx="2.5"/>
+        <rect x="856" y="160" width="72" height="5" rx="2.5"/>
+      </g>
+      <circle cx="944" cy="70" r="13" fill="#1E5468" stroke="#fff" stroke-width="2"/>
+      <path d="M938 70 L943 75 L951 66" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+
+  </g>
+</svg>

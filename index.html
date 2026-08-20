@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Publications · Denis Lamard — guides sur les agents IA en production</title>
+<meta name="description" content="Guides et articles sur la conception et l'exploitation d'agents IA dans des processus métier. Éligibilité, architecture, déploiement progressif, coût et conformité. PDF en accès libre.">
+<meta name="author" content="Denis Lamard">
+<meta name="theme-color" content="#0F1519">
+<link rel="canonical" href="https://denislamard.github.io/publications/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Denis Lamard · App-Novative">
+<meta property="og:title" content="Publications · Denis Lamard">
+<meta property="og:description" content="Guides et articles sur la conception et l'exploitation d'agents IA dans des processus métier. PDF en accès libre, sans inscription.">
+<meta property="og:url" content="https://denislamard.github.io/publications/">
+<meta property="og:image" content="https://denislamard.github.io/publications/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/source-serif-4-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Publications · Denis Lamard",
+  "description": "Guides et articles sur la conception et l'exploitation d'agents IA dans des processus métier.",
+  "url": "https://denislamard.github.io/publications/",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Person",
+    "name": "Denis Lamard",
+    "jobTitle": "Concepteur et intégrateur d'agents IA",
+    "url": "https://denislamard.github.io",
+    "sameAs": ["https://github.com/denislamard"]
+  },
+  "hasPart": [
+    {
+      "@type": "DigitalDocument",
+      "name": "Intégrer un agent IA dans un processus métier",
+      "version": "1.3",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/guide-agent-ia.pdf",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Avant d'intégrer un agent IA, répondez à ces 4 questions",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/quatre-questions-agent-ia.pdf",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Un agent, plusieurs modèles",
+      "version": "1.1",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/guide-choix-modeles.pdf",
+      "inLanguage": "fr"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="large">
+    <span class="marque">Denis Lamard · Publications</span>
+    <nav>
+      <a href="https://github.com/denislamard/loom">LOOM.IA</a>
+      <a href="https://denislamard.github.io">denislamard.github.io</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="large">
+    <div>
+      <p class="surtitre">Conception et exploitation d'agents IA</p>
+      <h1>Guides et articles</h1>
+      <p class="chapo">Ce que j'ai appris en faisant tenir des agents IA en production, écrit pour les personnes qui décident de les brancher et qui portent la responsabilité du résultat.</p>
+    </div>
+    <figure>
+      <img src="assets/img/hero-document-agent.svg" alt="" width="1000" height="280" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     TABLE DE LA COLLECTION
+     Une ligne par titre. À tenir à jour en même temps que les cahiers.
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="collection">
+  <div class="large">
+    <h2>La collection</h2>
+    <table class="index">
+      <thead>
+        <tr><th class="n">N°</th><th>Titre</th><th>Nature</th><th class="r">Format</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="n">01</td>
+          <td class="t"><a href="#c01">Intégrer un agent IA dans un processus métier</a></td>
+          <td>Guide de mise en œuvre</td>
+          <td class="r">v1.3 · 2026</td>
+        </tr>
+        <tr>
+          <td class="n">02</td>
+          <td class="t"><a href="#c03">Un agent, plusieurs modèles</a></td>
+          <td>Guide de conception</td>
+          <td class="r">v1.1 · 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<main>
+
+<!-- ═══ CAHIER 01 ═══ -->
+<article class="cahier" id="c01">
+  <div class="large">
+
+    <div class="entete">
+      <span class="numero">01</span>
+      <span class="genre">Guide de mise en œuvre</span>
+      <span class="paru">Version 1.3 · 2026</span>
+    </div>
+
+    <div class="corps">
+
+      <div class="texte">
+        <h3>Intégrer un agent IA dans un processus métier</h3>
+        <p class="sous">Critères d'éligibilité, architecture, déploiement progressif et conformité.</p>
+
+        <p class="pitch">Les projets d'agents s'arrêtent rarement en démonstration. Ils s'arrêtent entre la démonstration et la production, sur une branche du processus que personne n'avait cartographiée. Ce guide déroule la méthode que j'applique avant d'écrire la première ligne de code : trancher entre un agent et un workflow, noter le processus sur quatre critères, poser la vérification de sortie, puis monter en autonomie sur des chiffres. Le fil conducteur est une boîte mail partagée, parce que toutes les organisations en ont une et que le cas se transpose à la relance commerciale comme au tri de tickets.</p>
+
+        <blockquote class="extrait">
+          <p>«&#8239;Presque aucune de ces défaillances ne relève de la qualité du modèle. Elles relèvent toutes de l'ingénierie qu'on met autour.&#8239;»</p>
+          <cite>§ 10 · Ce qui casse en production</cite>
+        </blockquote>
+
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Le test qui tranche</strong> entre un agent et un workflow&#8239;: peut-on énumérer les branches du processus&#8239;?</li>
+          <li><strong>Une grille d'éligibilité notée de 0 à 3</strong> sur le volume, la valeur unitaire, la réversibilité et la mesurabilité, appliquée à trois processus courants.</li>
+          <li><strong>Le déploiement en quatre marches</strong>, du mode shadow à l'autonomie, avec les seuils chiffrés de passage.</li>
+          <li><strong>Sept défaillances de production</strong> et leur parade, les points RGPD à traiter en amont, et seize points de checklist avant ouverture sur le flux réel.</li>
+        </ul>
+      </div>
+
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/01/cover-guide-agent-ia.webp" alt="Couverture du guide Intégrer un agent IA dans un processus métier" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>18</dd></div>
+          <div><dt>Version</dt><dd class="v">1.3</dd></div>
+          <div><dt>Lecture</dt><dd>30&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="guide-agent-ia.pdf">Ouvrir le PDF <span class="poids">520&nbsp;Ko</span></a>
+      </div>
+
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/01/apercu-guide-agent-ia-1.webp" alt="Page 7 du guide : la grille d'éligibilité scorée" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 7</b>La grille d'éligibilité scorée</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/01/apercu-guide-agent-ia-2.webp" alt="Page 10 du guide : le chemin d'écriture idempotent" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 10</b>Le chemin d'écriture idempotent</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/01/apercu-guide-agent-ia-3.webp" alt="Page 12 du guide : les quatre marches du déploiement" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 12</b>Les quatre marches du déploiement</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CAHIER 02 ═══ -->
+<article class="cahier" id="c03">
+  <div class="large">
+
+    <div class="entete">
+      <span class="numero">02</span>
+      <span class="genre">Guide de conception</span>
+      <span class="paru">Version 1.1 · 2026</span>
+    </div>
+
+    <div class="corps">
+      <div class="texte">
+        <h3><a href="guide-choix-modeles.pdf">Un agent, plusieurs modèles</a></h3>
+        <p class="sous">Modèles frontier, modèles à poids ouverts, et un modèle par rôle.</p>
+
+        <p class="pitch">«&#8239;Vous utilisez quel modèle&#8239;?&#8239;» arrive au premier appel, souvent avant la question du prix, et elle attend le nom d'un produit. La réponse porte en réalité sur le découpage de l'agent en rôles, et elle se prend avant de choisir un nom. Le guide pose d'abord le vocabulaire sur lequel se prennent des décisions d'achat par malentendu, puis déroule l'arbitrage sur les chiffres d'un agent de relance en service&#8239;: cinq configurations comparées à qualité contrôlée par les mêmes critères de juge.</p>
+
+        <blockquote class="extrait">
+          <p>«&#8239;Mes agents en production utilisent quatre modèles, et le plus cher des quatre traite moins d'un cinquième du volume.&#8239;»</p>
+          <cite>§ 1 · La question qu'on me pose en premier</cite>
+        </blockquote>
+
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Sept rôles dans un agent</strong>, et ce que chacun exige réellement du modèle qui le tient.</li>
+          <li><strong>Un facteur 3,5 sur la facture</strong> entre la configuration la plus chère et la moins chère, à volume et à qualité constants.</li>
+          <li><strong>Cinq situations où le modèle rapide cède</strong>, reconnaissables au symptôme plutôt qu'à un score.</li>
+          <li><strong>Trois annexes</strong>&#8239;: lexique, relevé de tarifs à dater, et le service d'un modèle sur votre propre infrastructure.</li>
+        </ul>
+      </div>
+
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/02/cover-guide-choix-modeles.webp" alt="Couverture du guide Un agent, plusieurs modèles" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>19</dd></div>
+          <div><dt>Version</dt><dd class="v">1.1</dd></div>
+          <div><dt>Lecture</dt><dd>30&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="guide-choix-modeles.pdf">Ouvrir le PDF <span class="poids">257&nbsp;Ko</span></a>
+      </div>
+
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/02/apercu-guide-choix-modeles-1.webp" alt="Page 6 du guide : les sept rôles d'un agent" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 6</b>Les sept rôles d'un agent</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/02/apercu-guide-choix-modeles-2.webp" alt="Page 9 du guide : cinq configurations comparées en euros" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 9</b>Cinq configurations, en euros</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/02/apercu-guide-choix-modeles-3.webp" alt="Page 11 du guide : les cinq raisons de mélanger les modèles" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 11</b>Mélanger les modèles, cinq raisons</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ Nouveau cahier : copier le contenu de MODELE-ENTREE.html juste au-dessus ═══ -->
+
+</main>
+
+<footer class="pied">
+  <div class="large">
+    <div>
+      <h5>Le code</h5>
+      <p>Le socle d'orchestration décrit dans ces documents est public&#8239;: <a href="https://github.com/denislamard/loom">github.com/denislamard/loom</a></p>
+    </div>
+    <div>
+      <h5>Le détail technique</h5>
+      <p>Architecture, études de cas et conditions d'intervention&#8239;: <a href="https://denislamard.github.io">denislamard.github.io</a></p>
+    </div>
+    <p class="legal">Denis Lamard · App-Novative · France · ni cookie ni traceur</p>
+  </div>
+</footer>
+
+</body>
+</html>

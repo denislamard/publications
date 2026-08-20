@@ -1,11 +1,38 @@
-# Tout est ignoré par défaut
+# Liste blanche : tout est ignoré, sauf ce qui est explicitement autorisé.
+
+# 1. Tout est ignoré par défaut
 *
 
-# Sauf les dossiers, pour que Git puisse descendre dedans
+# 2. Sauf les dossiers, pour que Git puisse descendre dedans
 !*/
 
-# Sauf ce qu'on publie
-!*.pdf
-!README.md
+# 3. Ce qui est publié à la racine
 !.gitignore
+!.nojekyll
+!README.md
 !LICENSE
+!index.html
+!*.pdf
+
+# 4. Le site
+!assets/css/*.css
+!assets/fonts/*.woff2
+!assets/fonts/LICENCES.md
+!assets/img/*.svg
+!assets/img/*.png
+!assets/img/*.webp
+!assets/img/**/*.webp
+
+# 5. L'outillage
+!outils/*.py
+!outils/*.html
+
+# 6. Jamais publiés, même s'ils tombent dans une règle ci-dessus
+.venv/
+__pycache__/
+*.pyc
+uv.lock
+pyproject.toml
+*.docx
+.~lock.*#
+images/
