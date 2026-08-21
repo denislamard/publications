@@ -49,32 +49,43 @@
     {
       "@type": "DigitalDocument",
       "name": "Intégrer un agent IA dans un processus métier",
+      "description": "Ce qu'il faut décider avant d'écrire la première ligne : périmètre, données, reprise sur incident et conditions de passage en production.",
       "version": "1.3",
       "datePublished": "2026",
       "encodingFormat": "application/pdf",
       "url": "https://denislamard.github.io/publications/guide-agent-ia.pdf",
-      "inLanguage": "fr"
-    },
-    {
-      "@type": "DigitalDocument",
-      "name": "Avant d'intégrer un agent IA, répondez à ces 4 questions",
-      "datePublished": "2026",
-      "encodingFormat": "application/pdf",
-      "url": "https://denislamard.github.io/publications/quatre-questions-agent-ia.pdf",
-      "inLanguage": "fr"
+      "inLanguage": "fr",
+      "keywords": "agent IA, processus métier, mise en production, cadrage",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
     },
     {
       "@type": "DigitalDocument",
       "name": "Un agent, plusieurs modèles",
+      "description": "Le découpage d'un agent en rôles, et l'arbitrage entre modèles sur les chiffres d'un agent de relance en service.",
       "version": "1.1",
       "datePublished": "2026",
       "encodingFormat": "application/pdf",
       "url": "https://denislamard.github.io/publications/guide-choix-modeles.pdf",
-      "inLanguage": "fr"
+      "inLanguage": "fr",
+      "keywords": "LLM, choix de modèle, coût, rôles, FinOps IA",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Un agent, ses outils",
+      "description": "Ce qu'un outil expose, ce qu'il rend, et ce qu'il ouvre : conception, description, exécution, effets de bord, sécurité et mesure.",
+      "version": "1.0",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/guide-outils-agent.pdf",
+      "inLanguage": "fr",
+      "keywords": "agent IA, tool calling, function calling, MCP, schéma JSON, idempotence, sécurité des agents",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
     }
   ]
 }
 </script>
+
 </head>
 <body>
 
@@ -126,6 +137,12 @@
           <td>Guide de conception</td>
           <td class="r">v1.1 · 2026</td>
         </tr>
+        <tr>
+          <td class="n">03</td>
+          <td class="t"><a href="#c03">Un agent, ses outils</a></td>
+          <td>Guide technique</td>
+          <td class="r">v1.4 · 2026</td>
+        </tr>        
       </tbody>
     </table>
   </div>
@@ -261,6 +278,65 @@
           <figure>
             <img src="assets/img/02/apercu-guide-choix-modeles-3.webp" alt="Page 11 du guide : les cinq raisons de mélanger les modèles" width="340" height="481" loading="lazy">
             <figcaption><b>Page 11</b>Mélanger les modèles, cinq raisons</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CAHIER 03 ═══ -->
+<article class="cahier" id="c04">
+  <div class="large">
+    <div class="entete">
+      <span class="numero">03</span>
+      <span class="genre">Guide de conception</span>
+      <span class="paru">Version 1.4 · 2026</span>
+    </div>
+    <div class="corps">
+      <div class="texte">
+        <h3><a href="guide-outils-agent.pdf">Un agent, ses outils</a></h3>
+        <p class="sous">Ce qu'un outil expose, ce qu'il rend, et ce qu'il ouvre. Conception, exécution et sécurité.</p>
+        <p class="pitch">«&#8239;Et l'agent IA accède à quoi, exactement&#8239;?&#8239;» arrive au deuxième appel, une fois le principe acquis, et elle vient presque toujours du développeur qui devra vivre avec le système. La réponse tient dans une liste écrite par une personne identifiable&#8239;: le catalogue d'outils. Le guide pose d'abord le vocabulaire et le trajet complet d'un appel, puis descend dans le travail réel&#8239;: le découpage d'un outil, sa description qui porte le routage, ce qu'il rend au modèle, ce qu'il faut prévoir quand il écrit, et la façon de mesurer tout cela. Le fil rouge est un agent d'accueil pour une entreprise de travaux, et ses 8 outils reviennent d'un bout à l'autre.</p>
+        <blockquote class="extrait">
+          <p>«&#8239;Un outil qui écrit sans clé d'idempotence est un incident en attente de son premier timeout.&#8239;»</p>
+          § 5 · Concevoir un outil : le découpage
+        </blockquote>
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Les 7 étapes d'un appel d'outil</strong>, dont 6 relèvent de votre code et une seule du modèle.</li>
+          <li><strong>Quatre natures d'outil</strong> derrière une forme unique&#8239;: fonction locale, serveur MCP, modèle spécialisé, recherche documentaire.</li>
+          <li><strong>Ce qu'un outil rend au modèle</strong>, et pourquoi une erreur formulée pour lui se corrige au tour suivant.</li>
+          <li><strong>Quatre annexes</strong>&#8239;: lexique, fiche de mise en production d'un outil, anatomie d'un outil en code, et relevé daté des formats d'appel.</li>
+        </ul>
+      </div>
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/03/cover-guide-outils-agent.webp" alt="Couverture du guide Un agent, ses outils" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>27</dd></div>
+          <div><dt>Version</dt><dd class="v">1.4</dd></div>
+          <div><dt>Lecture</dt><dd>35&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="guide-outils-agent.pdf">Ouvrir le PDF <span class="poids">417&nbsp;Ko</span></a>
+      </div>
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/03/apercu-guide-outils-agent-1.webp" alt="Page 2 du guide : le catalogue de huit outils de l'agent d'accueil" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 4</b>Le catalogue, huit outils</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/03/apercu-guide-outils-agent-2.webp" alt="Page 5 du guide : le trajet d'un appel d'outil en sept étapes" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 7</b>Le trajet d'un appel, en sept étapes</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/03/apercu-guide-outils-agent-3.webp" alt="Page 19 du guide : anatomie d'un outil en code" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 24</b>Anatomie d'un outil, en code</figcaption>
           </figure>
         </div>
       </div>
