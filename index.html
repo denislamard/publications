@@ -105,6 +105,18 @@
       "inLanguage": "fr",
       "keywords": "agent IA, Firecracker, microVM, sandbox, exécution de code, vsock, sécurité des agents, outils générés",
       "author": { "@type": "Person", "name": "Denis Lamard" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Donner une mémoire à un agent",
+      "description": "La mémoire locale d'un agent : qui décide de ce qui entre, le confinement du seul tool qui lit le disque, la recherche hybride reclassée, et le réglage du seuil sur des cas de référence.",
+      "version": "1.0",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/etude-memoire-locale.pdf",
+      "inLanguage": "fr",
+      "keywords": "mémoire d'agent, MCP, RAG local, BGE-M3, reranking, Qdrant, recherche hybride, sécurité des agents",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
     }
   ]
 }
@@ -177,6 +189,12 @@
           <td class="n">05</td>
           <td class="t"><a href="#c05">Laisser un agent écrire ses propres outils</a></td>
           <td>Réflexion</td>
+          <td class="r">v1.0 · 2026</td>
+        </tr>
+        <tr>
+          <td class="n">06</td>
+          <td class="t"><a href="#c06">Donner une mémoire à un agent</a></td>
+          <td>Étude de cas</td>
           <td class="r">v1.0 · 2026</td>
         </tr>
       </tbody>
@@ -491,6 +509,65 @@
           <figure>
             <img src="assets/img/05/apercu-reflexion-outil-autocode-3.webp" alt="Page 12 du cahier : l’erreur telle que le modèle la lit" width="340" height="481" loading="lazy">
             <figcaption><b>Page 12</b>L’erreur telle que le modèle la lit</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CAHIER 06 ═══ -->
+<article class="cahier" id="c06">
+  <div class="large">
+    <div class="entete">
+      <span class="numero">06</span>
+      <span class="genre">Étude de cas</span>
+      <span class="paru">Version 1.0 · 2026</span>
+    </div>
+    <div class="corps">
+      <div class="texte">
+        <h3><a href="etude-memoire-locale.pdf">Donner une mémoire à un agent</a></h3>
+        <p class="sous">Choisir ce qu’il retient, sur le cas d’un serveur MCP en local.</p>
+        <p class="pitch">«&#8239;Tu te rappelles ce que je t’ai dit sur ce projet&#8239;?&#8239;» Les assistants répondent à cette question par une mémoire automatique, qui enregistre ce que le modèle a cru comprendre d’une conversation. Ce cahier décrit la mémoire que j’ai écrite pour que la décision reste la mienne&#8239;: un serveur MCP local, neuf tools, une recherche hybride reclassée par un cross-encoder, et l’écriture réservée à ce que je demande explicitement. Le fil conducteur est ma propre base, sur ma machine. La dernière partie dit ce que ce modèle laisse passer.</p>
+        <blockquote class="extrait">
+          <p>«&#8239;Les valeurs par défaut sont la vraie politique de sécurité d’un outil, puisque ce sont elles qui tournent chez les gens.&#8239;»</p>
+          <cite>§ 16 · Ce que je retiens</cite>
+        </blockquote>
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Neuf tools séparés en deux familles</strong>, quatre déclarés en lecture au sens MCP, cinq derrière une consigne dont le cahier dit exactement ce qu’elle vaut.</li>
+          <li><strong>Dix-neuf motifs de refus inscrits dans le code</strong>, appliqués à chaque composant d’un chemin, avec une liste de racines lisibles vide par défaut.</li>
+          <li><strong>Le chemin de titres préfixé au morceau</strong> avant vectorisation&#8239;: une ligne de code, et le réglage qui a le plus déplacé le rappel.</li>
+          <li><strong>Quatre annexes</strong>&#8239;: lexique, revue avant de brancher une mémoire, les 17&nbsp;variables de configuration, et la ligne de commande.</li>
+        </ul>
+      </div>
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/06/cover-etude-memoire-locale.webp" alt="Couverture du cahier Donner une mémoire à un agent" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>20</dd></div>
+          <div><dt>Version</dt><dd class="v">1.0</dd></div>
+          <div><dt>Lecture</dt><dd>30&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="etude-memoire-locale.pdf">Ouvrir le PDF <span class="poids">585&nbsp;Ko</span></a>
+      </div>
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/06/apercu-etude-memoire-locale-1.webp" alt="Page 3 du cahier : le tableau des neuf tools" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 3</b>Les neuf tools, deux familles</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/06/apercu-etude-memoire-locale-2.webp" alt="Page 6 du cahier : les trois contrôles d’accès en code" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 6</b>Le contrôle d’accès, en code</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/06/apercu-etude-memoire-locale-3.webp" alt="Page 8 du cahier : le trajet d’une note, de l’ajout aux deux collections" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 8</b>Le trajet d’une note</figcaption>
           </figure>
         </div>
       </div>
