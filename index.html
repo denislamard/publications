@@ -93,6 +93,18 @@
       "inLanguage": "fr",
       "keywords": "MCP, serveur filesystem, sécurité des agents, contrôle d'accès, confinement, motifs de refus, journal d'audit",
       "author": { "@type": "Person", "name": "Denis Lamard" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Laisser un agent écrire ses propres outils",
+      "description": "Une réflexion sur l'exécution de code écrit par un modèle dans une microVM Firecracker : frontière, protocole, session, dépendances, limites, erreurs et artefacts, avec les questions laissées ouvertes.",
+      "version": "1.0",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/reflexion-outil-autocode.pdf",
+      "inLanguage": "fr",
+      "keywords": "agent IA, Firecracker, microVM, sandbox, exécution de code, vsock, sécurité des agents, outils générés",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
     }
   ]
 }
@@ -159,6 +171,12 @@
           <td class="n">04</td>
           <td class="t"><a href="#c04">Donner un disque à un agent</a></td>
           <td>Étude de cas</td>
+          <td class="r">v1.0 · 2026</td>
+        </tr>
+        <tr>
+          <td class="n">05</td>
+          <td class="t"><a href="#c05">Laisser un agent écrire ses propres outils</a></td>
+          <td>Réflexion</td>
           <td class="r">v1.0 · 2026</td>
         </tr>
       </tbody>
@@ -414,6 +432,65 @@
           <figure>
             <img src="assets/img/04/apercu-guide-disque-agent-3.webp" alt="Page 18 du guide : les refus et leurs messages" width="340" height="481" loading="lazy">
             <figcaption><b>Page 18</b>Les refus et leurs messages</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CAHIER 05 ═══ -->
+<article class="cahier" id="c05">
+  <div class="large">
+    <div class="entete">
+      <span class="numero">05</span>
+      <span class="genre">Réflexion</span>
+      <span class="paru">Version 1.0 · 2026</span>
+    </div>
+    <div class="corps">
+      <div class="texte">
+        <h3><a href="reflexion-outil-autocode.pdf">Laisser un agent écrire ses propres outils</a></h3>
+        <p class="sous">Exécuter du code non fiable dans une microVM, et ce que ça change pour un agent.</p>
+        <p class="pitch">«&#8239;Il pourrait pas le faire lui-même, l’agent&#8239;?&#8239;» La question vient d’un carreleur qui veut un récapitulatif de chantiers au format de son comptable, hors de tout ce que le catalogue d’outils prévoit. Ce cahier explore ce qu’il faudrait pour laisser un agent écrire un tel traitement, l’exécuter dans une microVM Firecracker sans réseau ni clé d’API, et le réutiliser. Il décrit un design, avec ses arbitrages, et garde ouvertes les questions encore à trancher. La dernière partie rassemble ce que cette hypothèse laisse de côté, jusqu’à la question de fond sur l’auditabilité d’un outil écrit à la volée.</p>
+        <blockquote class="extrait">
+          <p>«&#8239;Une connexion vsock ouverte est une session. Une connexion fermée est une purge.&#8239;»</p>
+          <cite>§ 5 · Lier la session à la connexion</cite>
+        </blockquote>
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Trois niveaux d’isolation comparés</strong>, sous-processus, conteneur et microVM, avec ce que chacun coûte et ce qu’il laisse passer.</li>
+          <li><strong>Six verbes pour tout le protocole</strong> entre l’hôte et la machine, dont deux seulement transportent des octets vers l’invité.</li>
+          <li><strong>Des limites avec un plafond</strong>&#8239;: 30&nbsp;secondes par défaut, 5&nbsp;minutes au plus, et un plancher de 128&nbsp;Mio pour que l’interpréteur démarre.</li>
+          <li><strong>Cinq questions laissées ouvertes</strong> en chemin, puis cinq sujets écartés du premier jet, dont l’injection indirecte et l’auditabilité.</li>
+        </ul>
+      </div>
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/05/cover-reflexion-outil-autocode.webp" alt="Couverture du cahier Laisser un agent écrire ses propres outils" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>17</dd></div>
+          <div><dt>Version</dt><dd class="v">1.0</dd></div>
+          <div><dt>Lecture</dt><dd>30&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="reflexion-outil-autocode.pdf">Ouvrir le PDF <span class="poids">621&nbsp;Ko</span></a>
+      </div>
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/05/apercu-reflexion-outil-autocode-1.webp" alt="Page 5 du cahier : l’hôte, la frontière et l’invité" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 5</b>L’hôte, la frontière, l’invité</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/05/apercu-reflexion-outil-autocode-2.webp" alt="Page 10 du cahier : les limites de ressources et leurs plafonds" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 10</b>Les limites et leurs plafonds</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/05/apercu-reflexion-outil-autocode-3.webp" alt="Page 12 du cahier : l’erreur telle que le modèle la lit" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 12</b>L’erreur telle que le modèle la lit</figcaption>
           </figure>
         </div>
       </div>
