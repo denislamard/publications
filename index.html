@@ -81,6 +81,18 @@
       "inLanguage": "fr",
       "keywords": "agent IA, tool calling, function calling, MCP, schéma JSON, idempotence, sécurité des agents",
       "author": { "@type": "Person", "name": "Denis Lamard" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Donner un disque à un agent",
+      "description": "Le modèle de sécurité d'un serveur MCP filesystem : rôles, confinement, motifs de refus, journal d'audit, et ce que le filtrage par nom ne couvre pas.",
+      "version": "1.0",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/guide-disque-agent.pdf",
+      "inLanguage": "fr",
+      "keywords": "MCP, serveur filesystem, sécurité des agents, contrôle d'accès, confinement, motifs de refus, journal d'audit",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
     }
   ]
 }
@@ -143,6 +155,12 @@
           <td>Guide technique</td>
           <td class="r">v1.4 · 2026</td>
         </tr>        
+        <tr>
+          <td class="n">04</td>
+          <td class="t"><a href="#c04">Donner un disque à un agent</a></td>
+          <td>Étude de cas</td>
+          <td class="r">v1.0 · 2026</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -337,6 +355,65 @@
           <figure>
             <img src="assets/img/03/apercu-guide-outils-agent-3.webp" alt="Page 19 du guide : anatomie d'un outil en code" width="340" height="481" loading="lazy">
             <figcaption><b>Page 24</b>Anatomie d'un outil, en code</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CAHIER 04 ═══ -->
+<article class="cahier" id="c04">
+  <div class="large">
+    <div class="entete">
+      <span class="numero">04</span>
+      <span class="genre">Étude de cas</span>
+      <span class="paru">Version 1.0 · 2026</span>
+    </div>
+    <div class="corps">
+      <div class="texte">
+        <h3><a href="guide-disque-agent.pdf">Donner un disque à un agent</a></h3>
+        <p class="sous">Rôles, confinement et refus, sur le cas d’un serveur MCP filesystem.</p>
+        <p class="pitch">Brancher un serveur MCP filesystem prend trois lignes de configuration, et le serveur de référence accorde ensuite lecture, écriture et suppression sur tout ce qu’on lui a déclaré, fichiers d’environnement compris. Ce cahier décrit le modèle de sécurité de celui que j’ai écrit pour le remplacer&#8239;: un rôle qui plafonne les droits de chaque répertoire, une fonction de résolution par laquelle passent tous les outils, une liste de refus qu’aucun fichier de configuration ne peut raccourcir. Le fil conducteur est ma propre configuration, cinq racines sur une machine de développement. La dernière partie dit ce que ce modèle ne couvre pas.</p>
+        <blockquote class="extrait">
+          <p>«&#8239;Une garantie qu’un fichier de configuration peut désactiver n’est plus une garantie.&#8239;»</p>
+          <cite>§ 6 · Les motifs de refus</cite>
+        </blockquote>
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Trois rôles et un plafond</strong> que la configuration peut resserrer sans jamais l’élargir, avec une taille de lecture maximale de 1, 2 ou 8&nbsp;Mio selon le rôle.</li>
+          <li><strong>Les 3 contrôles de la fonction de résolution</strong>, dans l’ordre où ils s’appliquent, et la raison pour laquelle la permission passe avant le confinement.</li>
+          <li><strong>20 motifs de refus inscrits dans le code</strong>, appliqués à chaque composant d’un chemin, et qui retirent aussi le fichier des listings.</li>
+          <li><strong>Quatre annexes</strong>&#8239;: lexique, revue avant d’ouvrir un dossier à un agent, configuration champ par champ, et les 11 refus avec leur message exact.</li>
+        </ul>
+      </div>
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/04/cover-guide-disque-agent.webp" alt="Couverture du guide Donner un disque à un agent" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>19</dd></div>
+          <div><dt>Version</dt><dd class="v">1.0</dd></div>
+          <div><dt>Lecture</dt><dd>30&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="guide-disque-agent.pdf">Ouvrir le PDF <span class="poids">377&nbsp;Ko</span></a>
+      </div>
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/04/apercu-guide-disque-agent-1.webp" alt="Page 6 du guide : les trois contrôles de la fonction de résolution" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 6</b>Les trois contrôles, dans l’ordre</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/04/apercu-guide-disque-agent-2.webp" alt="Page 9 du guide : la surface d’outils selon la configuration" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 9</b>Le catalogue suit la configuration</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/04/apercu-guide-disque-agent-3.webp" alt="Page 18 du guide : les refus et leurs messages" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 18</b>Les refus et leurs messages</figcaption>
           </figure>
         </div>
       </div>
