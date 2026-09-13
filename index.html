@@ -117,6 +117,18 @@
       "inLanguage": "fr",
       "keywords": "mémoire d'agent, MCP, RAG local, BGE-M3, reranking, Qdrant, recherche hybride, sécurité des agents",
       "author": { "@type": "Person", "name": "Denis Lamard" }
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "Donner un agenda à un agent",
+      "description": "Un agenda et des tâches lus par un agent : le statut qui survit au passage du temps, la date de mise en service en dessous de laquelle rien n'est en retard, et le refus de deviner sur les écritures ambiguës.",
+      "version": "1.0",
+      "datePublished": "2026",
+      "encodingFormat": "application/pdf",
+      "url": "https://denislamard.github.io/publications/etude-agenda-agent.pdf",
+      "inLanguage": "fr",
+      "keywords": "agenda d'agent, MCP, Google Calendar, Google Tasks, OAuth, retards, récurrences, sécurité des agents",
+      "author": { "@type": "Person", "name": "Denis Lamard" }
     }
   ]
 }
@@ -194,6 +206,12 @@
         <tr>
           <td class="n">06</td>
           <td class="t"><a href="#c06">Donner une mémoire à un agent</a></td>
+          <td>Étude de cas</td>
+          <td class="r">v1.0 · 2026</td>
+        </tr>
+        <tr>
+          <td class="n">07</td>
+          <td class="t"><a href="#c07">Donner un agenda à un agent</a></td>
           <td>Étude de cas</td>
           <td class="r">v1.0 · 2026</td>
         </tr>
@@ -568,6 +586,65 @@
           <figure>
             <img src="assets/img/06/apercu-etude-memoire-locale-3.webp" alt="Page 8 du cahier : le trajet d’une note, de l’ajout aux deux collections" width="340" height="481" loading="lazy">
             <figcaption><b>Page 8</b>Le trajet d’une note</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ═══ CAHIER 07 ═══ -->
+<article class="cahier" id="c07">
+  <div class="large">
+    <div class="entete">
+      <span class="numero">07</span>
+      <span class="genre">Étude de cas</span>
+      <span class="paru">Version 1.0 · 2026</span>
+    </div>
+    <div class="corps">
+      <div class="texte">
+        <h3><a href="etude-agenda-agent.pdf">Donner un agenda à un agent</a></h3>
+        <p class="sous">Ce qui est passé reste à faire, sur le cas d’un serveur MCP Google Agenda.</p>
+        <p class="pitch">«&#8239;Qu’est-ce que j’ai aujourd’hui&#8239;?&#8239;» Un agenda répond avec ce qui est prévu, et se tait sur ce qui est passé sans avoir été fait&#8239;: le rendez-vous manqué, la relance notée pour jeudi, le point hebdomadaire oublié. Ce cahier décrit le serveur MCP que j’ai écrit pour que Claude Desktop ouvre sa réponse sur ces retards&#8239;: Google Agenda et Google Tasks fondus dans un seul format, treize tools, trois préfixes de titre qui tiennent lieu de statut, et une date de mise en service en dessous de laquelle rien n’est en retard. Le fil conducteur est mon propre agenda. La dernière partie dit ce que ce serveur laisse de côté.</p>
+        <blockquote class="extrait">
+          <p>«&#8239;Un système qui refuse d’oublier a besoin d’une date à partir de laquelle il commence à se souvenir, sinon il vous rend tout votre passé au premier appel.&#8239;»</p>
+          <cite>§ 14 · Ce que je retiens</cite>
+        </blockquote>
+        <p class="titre-liste">Ce que vous y trouverez</p>
+        <ul class="points">
+          <li><strong>Treize tools en deux familles</strong>, sept déclarés en lecture au sens MCP et six d’écriture qui commencent tous par la même consigne, avec ce qu’elle vaut réellement.</li>
+          <li><strong>Trois préfixes dans le titre</strong>, [fait], [annulé] et [suivi], lisibles depuis n’importe quelle interface Google, et la raison de les préférer à un champ propre.</li>
+          <li><strong>Quatre endroits où l’API Google ne dit pas ce qu’on croit</strong>&#8239;: la fin exclusive des journées entières, l’échéance sans heure, les descriptions en HTML et l’annulé qui disparaît.</li>
+          <li><strong>Quatre annexes</strong>&#8239;: lexique, revue avant de brancher un agenda, les 14&nbsp;clés de configuration, et les 14&nbsp;commandes de la ligne de commande.</li>
+        </ul>
+      </div>
+      <div class="fiche">
+        <div class="socle">
+          <img src="assets/img/07/cover-etude-agenda-agent.webp" alt="Couverture du cahier Donner un agenda à un agent" width="500" height="707" loading="lazy">
+        </div>
+        <dl class="specs">
+          <div><dt>Format</dt><dd>PDF A4</dd></div>
+          <div><dt>Pages</dt><dd>16</dd></div>
+          <div><dt>Version</dt><dd class="v">1.0</dd></div>
+          <div><dt>Lecture</dt><dd>25&nbsp;min</dd></div>
+          <div><dt>Langue</dt><dd>Français</dd></div>
+        </dl>
+        <a class="bouton" href="etude-agenda-agent.pdf">Ouvrir le PDF <span class="poids">606&nbsp;Ko</span></a>
+      </div>
+      <div class="apercus">
+        <h4>Aperçu</h4>
+        <div class="planche">
+          <figure>
+            <img src="assets/img/07/apercu-etude-agenda-agent-1.webp" alt="Page 4 du cahier : le trajet d’un appel et le tableau des treize tools" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 4</b>Le trajet d’un appel, treize tools</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/07/apercu-etude-agenda-agent-2.webp" alt="Page 6 du cahier : la règle des retards, entre l’epoch et maintenant" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 6</b>La règle des retards</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/07/apercu-etude-agenda-agent-3.webp" alt="Page 9 du cahier : ce que le tool next renvoie" width="340" height="481" loading="lazy">
+            <figcaption><b>Page 9</b>Ce que le tool next renvoie</figcaption>
           </figure>
         </div>
       </div>
